@@ -14,15 +14,14 @@ build-options:
 modules:
   - name: slonfig
     buildsystem: simple
-    subdir: slonfig/slonfig-harness
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml
       - cargo --offline build --release
       - install -Dm755 target/release/slonfig ${FLATPAK_DEST}/bin/slonfig
-      - install -Dm644 ../packaging/icon.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png 
-      - install -Dm644 ../packaging/slonfig.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml 
+      - install -Dm644 packaging/icon.png ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png 
+      - install -Dm644 packaging/slonfig.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml 
     sources:
       - type: git
-        url: https://git.slonk.ing/slonk/tf2-mod-config
-        commit: 7643ec472f91ce9d69d34126368549c2db8ce498
+        url: https://git.slonk.ing/slonk/slonfig
+        commit: 6ec2d71c45495b25af698a3439c746c6e07f16d6
       - cargo-sources.json
