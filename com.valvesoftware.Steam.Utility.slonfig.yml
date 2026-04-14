@@ -2,7 +2,7 @@ id: com.valvesoftware.Steam.Utility.slonfig
 default-branch: stable
 runtime: com.valvesoftware.Steam
 runtime-version: stable
-sdk: org.freedesktop.Sdk//24.08
+sdk: org.freedesktop.Sdk//25.08
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-nightly
 build-extension: true
